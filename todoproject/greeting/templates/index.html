@@ -9,5 +9,26 @@
     <h1>Hello World</h1>
     <button onclick="changeGreeting()">Click</button>
     <img src="{% static 'image.png' %}">
+
+    <p>Count is {{count}}</p>
+    <p>Count is {{count|safe}}</p>
+     {% if count > 20 %}
+    <p>Count is {{count}}</p>
+    {% else %}
+    <p>Count is not enough</p>
+    {% endif %}
+     {% for student in students %}
+        <p>{{student}}</p>
+    {% endfor %}
+    
+    <h1>{{ my_object.name }}</h1>
+<p>Age: {{ my_object.age }}</p>
+<p>City: {{ my_object.city }}</p>  
+  {% for obj in my_objects %}
+    <h1>{{ obj.name }}</h1>
+    <p>Age: {{ obj.age }}</p>
+    <p>City: {{ obj.city }}</p>
+   {% endfor %}
+
 </body>
 </html>
